@@ -1,0 +1,14 @@
+RewriteEngine on
+
+ErrorDocument 404 http://localhost/pdoporto/404.php
+
+
+RewriteRule ^anamenu$ index.php [NC,L]
+RewriteRule ^haqqimizda$ haqqimizda.php [NC,L]
+RewriteRule ^xeberler$ xeberler.php [NC,L]
+RewriteRule ^elaqe$ elaqe.php [NC,L]
+RewriteRule ^404$ 404.php [NC,L]
+RewriteRule ^faq$ faq.php [NC,L]
+RewriteRule ^serhler$ serhler.php [NC,L]
+
+RewriteRule ^xeber-etrafli/([0-9a-zA-Z-_]+)/([0-9]+)$ xeber-etrafli.php?sef=$1&xeber_id=$2 [L,QSA]
